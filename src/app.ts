@@ -8,14 +8,19 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
+
 app.use('/api', (req, res) => {
   res.send('API Obelisco');
+});
+
+app.use('/', (req, res) => {
+  res.send('Obelisco Ruta base');
 });
 
 // TODO app.use('/api', routes)
 // Middleware para capturar rutas no definidas
 app.use((req: Request, res: Response, next: NextFunction) => {
-  res.status(404).json({ status: 'error', message: 'Ruta no encontrada' });
+  res.status(404).json({ status: 'error', message: 'Obelisco Ruta no encontrada' });
 });
 
 // middleware capturar error:
