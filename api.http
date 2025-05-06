@@ -1,5 +1,5 @@
-GET  http://localhost:4000/api
-GET  http://localhost:4000/
+### RUTA RAIZ
+GET  http://localhost:3000/api
 
-###
-GET  http://localhost:4000/asdasdsa
+### EJEMPLO DE RUTA NO EXISTENTE
+GET  http://localhost:3000/not-found

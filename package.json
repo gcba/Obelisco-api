@@ -7,12 +7,13 @@
     "@types/express": "^5.0.1",
     "@types/module-alias": "^2.0.4",
     "@types/node": "^22.15.3",
+    "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "scripts": {
     "start": "node dist/server.js",
-    "dev": "nodemon src/server.ts",
+    "dev": "nodemon",
     "build": "tsc"
   },
   "repository": {
@@ -29,16 +30,6 @@
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "module-alias": "^2.2.3",
-    "nodemon": "^3.1.10"
-  },
-  "_moduleAliases": {
-    "@models": "dist/models",
-    "@utils": "dist/utils",
-    "@routes": "dist/routes",
-    "@controllers": "dist/controllers",
-    "@config": "dist/config",
-    "@middlewares": "dist/middlewares",
-    "@services": "dist/services"
+    "module-alias": "^2.2.3"
   }
 }
