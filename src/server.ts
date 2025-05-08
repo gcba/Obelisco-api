@@ -1,5 +1,5 @@
 import './config/configAlias';
-import 'module-alias/register';
+// import 'module-alias/register'; Esta linea es necesario si los alias estan configurados en el package.json
 import app from './app';
 const PORT = process.env.PORT || 4000;
 

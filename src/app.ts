@@ -25,7 +25,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 // middleware capturar error:
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-  console.log(err);
+  console.log('[ERROR]: ', err);
   sendResponse(res, 500, {
     status: 'error',
     message: 'API Obelisco: Error interno del servidor',
