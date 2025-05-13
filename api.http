@@ -1,5 +1,15 @@
 ### RUTA RAIZ
-GET  http://localhost:3000/api
+GET  http://localhost:3000/api/
 
 ### EJEMPLO DE RUTA NO EXISTENTE
 GET  http://localhost:3000/not-found
+
+
+### RUTA Footer
+GET  http://localhost:3000/api/footer/complete
+### RUTA Footer legales
+GET  http://localhost:3000/api/footer/legales
+
+
+### RUTA header
+GET  http://localhost:3000/api/header/complete

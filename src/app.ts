@@ -1,20 +1,20 @@
 import sendResponse from '@utils/sendResponse';
 import dotenv from 'dotenv';
 import express, { NextFunction, Request, Response } from 'express';
-
-// TODO importar rutas
+import router from './routes';
+import cors from 'cors';
+import path from 'path';
 
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
+// Middleware para servir archivos estáticos desde "public"
+app.use(express.static(path.join(__dirname, '../public')));
+app.use('/api', router);
 
-app.use('/api', (req, res) => {
-  sendResponse(res, 200, { message: 'API Obelisco' });
-});
-
-// TODO app.use('/api', routes)
 // Middleware para capturar rutas no definidas
 app.use((req: Request, res: Response, next: NextFunction) => {
   sendResponse(res, 404, {

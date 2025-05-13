@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0e2b1de9-e3b7-46e4-b89b-704a6a8ab39b",
+    "title": "102 - Niñez y Adolescencia",
+    "number": "tel:102"
+  },
+  {
+    "id": "382803c0-27cb-40e5-af7c-1496090c75fd",
+    "title": "103 - Emergencias",
+    "number": "tel:103"
+  },
+  {
+    "id": "efdaef57-4d61-416c-8151-d52a30042443",
+    "title": "107 - SAME",
+    "number": "tel:107"
+  },
+  {
+    "id": "269c2ed3-cb93-4e6c-ae41-5b52e1dc9b32",
+    "title": "911 - Policía",
+    "number": "tel:911"
+  },
+  {
+    "id": "6b3b9b18-639d-44c0-9142-86e008e117ec",
+    "title": "144 - Violencia de género",
+    "number": "tel:144"
+  },
+  {
+    "id": "6b1a5c61-d9ed-434b-a853-0f8f39fd37d0",
+    "title": "147 - Atención ciudadana",
+    "number": "tel:147"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "ciudad-ba.svg",
+    "alt": "Ciudad de Buenos Aires",
+    "url": "/footer/ciudad-ba.svg"
+  },
+  {
+    "id": 2,
+    "name": "ciudad-ba-sm.svg",
+    "alt": "Ciudad de Buenos Aires",
+    "url": "/footer/ciudad-ba-sm.svg"
+  },
+  {
+    "id": 3,
+    "name": "vamos-ba.svg",
+    "alt": "Vamos Buenos Aires",
+    "url": "/footer/vamos-ba.svg"
+  },
+  {
+    "id": 4,
+    "name": "logo_ba.svg",
+    "alt": "Gobierno de la Ciudad de Buenos Aires - Inicio",
+    "url": "/header/logo_ba.svg"
+  },
+  {
+    "id": 5,
+    "name": "logo_ba_mobile.svg",
+    "alt": "Gobierno de la Ciudad de Buenos Aires - Inicio",
+    "url": "/header/logo_ba_mobile.svg"
+  }
+]
