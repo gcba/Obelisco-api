@@ -1,4 +1,4 @@
-type UUID = string;
+export type UUID = string;
 
 export interface Phone {
   id: UUID;

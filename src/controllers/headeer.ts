@@ -1,4 +1,5 @@
-import { getHeaderComplete } from '@models/header';
+// import { getHeaderComplete } from '@services/header';
+import { getHeaderComplete } from '@services/headerdb';
 import sendResponse from '@utils/sendResponse';
 import { Request, Response } from 'express';
 

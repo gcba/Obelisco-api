@@ -1,4 +1,5 @@
-import { getFooterComplete, getFooterLegales } from '@models/footer';
+// import { getFooterComplete, getFooterLegales } from '@services/footer';
+import { getFooterComplete, getFooterLegales } from '@services/footerdb';
 import sendResponse from '@utils/sendResponse';
 import { Request, Response } from 'express';
 
