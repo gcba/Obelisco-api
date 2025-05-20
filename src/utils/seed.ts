@@ -1,8 +1,8 @@
 import Image from '@models/image';
 import { sequelize } from '@models/index';
 import Link from '@models/link';
-import Phone from '@models/Phone';
-import SocialMedia from '@models/SocialMedia';
+import Phone from '@models/phone';
+import SocialMedia from '@models/socialMedia';
 
 const seedDatabase = async () => {
   try {
