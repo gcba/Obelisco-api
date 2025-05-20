@@ -4,6 +4,8 @@ import express, { NextFunction, Request, Response } from 'express';
 import router from './routes';
 import cors from 'cors';
 import path from 'path';
+import swaggerUi from 'swagger-ui-express';
+import { swaggerSpec } from '@config/swagger';
 
 dotenv.config();
 
@@ -13,6 +15,7 @@ app.use(express.json());
 app.use(cors());
 // Middleware para servir archivos estáticos desde "public"
 app.use(express.static(path.join(__dirname, '../public')));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use('/api', router);
 
 // Middleware para capturar rutas no definidas

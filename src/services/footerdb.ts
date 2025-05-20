@@ -1,7 +1,7 @@
 import Image from '@models/image';
 import Link from '@models/link';
-import Phone from '@models/Phone';
-import SocialMedia from '@models/SocialMedia';
+import Phone from '@models/phone';
+import SocialMedia from '@models/socialMedia';
 
 export const getFooterComplete = async () => {
   try {
