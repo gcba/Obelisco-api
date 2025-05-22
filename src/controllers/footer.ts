@@ -1,5 +1,6 @@
 // import { getFooterComplete, getFooterLegales } from '@services/footer';
 import { getFooterComplete, getFooterLegales } from '@services/footerdb';
+import { footerCompleteDTO, footerLegalesDTO } from '@utils/dtos';
 import sendResponse from '@utils/sendResponse';
 import { Request, Response } from 'express';
 
@@ -23,7 +24,8 @@ import { Request, Response } from 'express';
 export const getComplete = async (req: Request, res: Response) => {
   try {
     const response = await getFooterComplete();
-    sendResponse(res, 200, response);
+    const responseDTO = footerCompleteDTO(response);
+    sendResponse(res, 200, responseDTO);
   } catch (error) {
     sendResponse(res, 500, {
       status: 'error',
@@ -53,7 +55,8 @@ export const getComplete = async (req: Request, res: Response) => {
 export const getLegales = async (req: Request, res: Response) => {
   try {
     const response = await getFooterLegales();
-    sendResponse(res, 200, response);
+    const responseDTO = footerLegalesDTO(response);
+    sendResponse(res, 200, responseDTO);
   } catch (error) {
     sendResponse(res, 500, {
       status: 'error',
