@@ -1,17 +1,18 @@
-import 'dotenv/config';
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
+
 dotenv.config();
 
-const sequelize = new Sequelize(process.env.DATABASE_URL || '', {
-  dialect: 'postgres',
-  logging: false,
-  // dialectOptions: {
-  //   ssl: {
-  //     require: true,
-  //     rejectUnauthorized: false, // Opción que permite ignorar ciertos errores de verificación SSL (por ejemplo, si el certificado no está validado)
-  //   },
-  // },
-});
+const sequelize = new Sequelize(
+  process.env.DB_NAME || '',
+  process.env.DB_USER || '',
+  process.env.DB_PASSWORD || '',
+  {
+    host: process.env.DB_HOST || '127.0.0.1',
+    port: Number(process.env.DB_PORT) || 3306,
+    dialect: 'mariadb',
+    logging: false,
+  }
+);
 
 export default sequelize;
