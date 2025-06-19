@@ -12,4 +12,7 @@ GET  http://localhost:3000/api/footer/legales
 
 
 ### RUTA header
-GET  http://localhost:3000/api/header/complete
+GET  http://localhost:3000/api/header/complete 
+
+### RUTA header HTML
+GET  http://localhost:3000/api/header/html
