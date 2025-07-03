@@ -1,6 +1,9 @@
 import moduleAlias from 'module-alias';
 import path from 'path';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 const basePath = process.env.NODE_ENV === 'production' ? 'dist' : 'src';
 
 moduleAlias.addAliases({

@@ -44,5 +44,14 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "tsconfig-paths": "^4.2.0"
+  },
+  "_moduleAliases": {
+    "@models": "dist/models",
+    "@utils": "dist/utils",
+    "@routes": "dist/routes",
+    "@controllers": "dist/controllers",
+    "@config": "dist/config",
+    "@middlewares": "dist/middlewares",
+    "@services": "dist/services"
   }
 }
