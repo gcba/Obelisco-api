@@ -1,15 +1,12 @@
-import readJson from '@utils/readJSON';
-import { Image } from '@utils/types';
+import Image from '@models/image';
 
 export const getHeaderComplete = async () => {
   try {
-    const images = await readJson<Image[]>('src/data/images.json');
+    const images = await Image.findAll();
     return {
       images,
     };
   } catch (error) {
-    throw new Error(
-      'Error al obtener datos del header. Verificá que los archivos JSON existan.'
-    );
+    throw new Error('Error al obtener datos del header.');
   }
 };

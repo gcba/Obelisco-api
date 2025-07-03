@@ -1,5 +1,4 @@
 // /src/models/index.ts
-
 import sequelize from '@config/database';
 
 const initializeModels = async () => {

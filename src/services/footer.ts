@@ -1,14 +1,14 @@
-import readJson from '@utils/readJSON';
-import { Link, Phone, SocialMedia, Footer, Image } from '@utils/types';
+import Image from '@models/image';
+import Link from '@models/link';
+import Phone from '@models/phone';
+import SocialMedia from '@models/socialMedia';
 
 export const getFooterComplete = async () => {
   try {
-    const links = await readJson<Link>('src/data/links.json');
-    const socialMedia = await readJson<SocialMedia>(
-      'src/data/socialMedias.json'
-    );
-    const phones = await readJson<Phone>('src/data/phones.json');
-    const images = await readJson<Image>('src/data/images.json');
+    const links = await Link.findAll();
+    const socialMedia = await SocialMedia.findAll();
+    const phones = await Phone.findAll();
+    const images = await Image.findAll();
     return {
       links,
       socialMedia,
@@ -16,23 +16,20 @@ export const getFooterComplete = async () => {
       images,
     };
   } catch (error) {
-    throw new Error(
-      'Error al obtener datos del footer. Verificá que los archivos JSON existan.'
-    );
+    throw new Error('Error al obtener datos del footer.');
   }
 };
 
 export const getFooterLegales = async () => {
   try {
-    const links = await readJson<Link>('src/data/links.json');
-    const images = await readJson<Image>('src/data/images.json');
+    const links = await Link.findAll();
+    const images = await Image.findAll();
+
     return {
       links,
       images,
     };
   } catch (error) {
-    throw new Error(
-      'Error al obtener datos del footer. Verificá que los archivos JSON existan.'
-    );
+    throw new Error('Error al obtener datos del footer.');
   }
 };

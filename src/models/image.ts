@@ -2,8 +2,6 @@ import sequelize from '@config/database';
 import { Image as ImageType, UUID } from '@utils/types';
 import { DataTypes, Model, Optional } from 'sequelize';
 
-// Phone model
-
 export class Image
   extends Model<Optional<ImageType, 'id'>>
   implements ImageType

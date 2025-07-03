@@ -1,5 +1,4 @@
-// import { getFooterComplete, getFooterLegales } from '@services/footer';
-import { getFooterComplete, getFooterLegales } from '@services/footerdb';
+import { getFooterComplete, getFooterLegales } from '@services/footer';
 import { footerCompleteDTO, footerLegalesDTO } from '@utils/dtos';
 import sendResponse from '@utils/sendResponse';
 import { Request, Response } from 'express';
