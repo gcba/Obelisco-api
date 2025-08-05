@@ -10,6 +10,3 @@ GET  http://localhost:3000/api/footer/complete
 ### RUTA Footer legales
 GET  http://localhost:3000/api/footer/legales
 
-
-### RUTA header
-GET  http://localhost:3000/api/header/complete
