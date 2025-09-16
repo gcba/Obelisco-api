@@ -13,3 +13,10 @@ GET  http://localhost:3000/api/footer/legales
 
 ### RUTA header
 GET  http://localhost:3000/api/header/complete
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXJsIjoiaHR0cHM6Ly9taS1mcm9udGVuZC5jb20iLCJpYXQiOjE3NTc5NjIwNzIsImV4cCI6MTc1Nzk2NTY3Mn0.76rmtC6h_gScmso5sKT5g0cVWZAdsDYgdopAabap5Yg 
+
+
+### RUTA AUTH
+GET  http://localhost:3000/api/auth/login
+Origin: https://mi-frontend.com
+Referer: https://mi-frontend.com/dashboard

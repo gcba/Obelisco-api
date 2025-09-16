@@ -1,4 +1,20 @@
+declare global {
+  namespace Express {
+    interface Request {
+      user?: {
+        id: number;
+        url: string;
+      };
+    }
+  }
+}
+
 export type UUID = string;
+
+export interface JWT_PAYLOAD {
+  id: number;
+  url: string;
+}
 
 export interface Phone {
   id: UUID;
