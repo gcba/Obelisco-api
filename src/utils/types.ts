@@ -26,6 +26,12 @@ export interface Image {
   url: string;
 }
 
+export interface Component {
+	id: UUID;
+	name: string;
+	code: string;
+}
+
 export interface Footer {
   phones?: Phone[];
 

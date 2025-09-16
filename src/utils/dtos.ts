@@ -47,3 +47,9 @@ export const footerLegalesDTO = (footer: any) => {
     images: footer.images.map((i: any) => ImageDTO(i)),
   };
 };
+
+export const componentDTO = (component: any) => {
+  return {
+    component: component.code,
+  };
+};

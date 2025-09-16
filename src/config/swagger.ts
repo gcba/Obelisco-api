@@ -1,5 +1,7 @@
 import swaggerJSDoc from 'swagger-jsdoc';
 
+const PORT = process.env.PORT || 4000;
+
 const swaggerDefinition = {
   openapi: '3.0.0',
   info: {
@@ -8,8 +10,8 @@ const swaggerDefinition = {
     description: 'Documentación Obelisco API',
   },
   servers: [
-    {
-      url: 'http://localhost:3000', // Cambiar en producción
+    { 
+			url: `http://localhost:${PORT}`, // Cambiar en producción
     },
   ],
   components: {
@@ -82,6 +84,12 @@ const swaggerDefinition = {
           },
         },
       },
+			Component: {
+				type: 'object',
+				properties: {
+					code: { type: 'string' },
+				},
+			},
     },
   },
 };
