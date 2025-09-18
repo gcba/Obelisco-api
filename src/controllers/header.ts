@@ -12,7 +12,7 @@ export const getComplete = async (req: Request, res: Response) => {
   } catch (error) {
     sendResponse(res, 500, {
       status: 'error',
-      message: 'API Obelisco: Error al obtener footer.',
+      message: 'API Obelisco: Error al obtener headeer.',
     });
   }
 };
