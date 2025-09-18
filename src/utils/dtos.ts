@@ -48,8 +48,12 @@ export const footerLegalesDTO = (footer: any) => {
   };
 };
 
-export const componentDTO = (component: any) => {
+export const componentDTO = (component: any, encoded: boolean = false) => {
+  const html = encoded
+    ? component.code
+    : Buffer.from(component.code, 'base64').toString('utf-8');
+
   return {
-    component: component.code,
+    html,
   };
 };

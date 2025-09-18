@@ -5,7 +5,7 @@ import { Request, Response, RequestHandler } from 'express';
 
 /**
  * @openapi
- * /api/component/{name}:
+ * /api/componentes/{name}:
  *   get:
  *     summary: Obtener un componente
  *     tags:
@@ -17,6 +17,12 @@ import { Request, Response, RequestHandler } from 'express';
  *         description: Nombre del componente a obtener (por ejemplo, "header" o "footer").
  *         schema:
  *           type: string
+ *       - in: query
+ *         name: encoded
+ *         required: false
+ *         description: Si es true, devuelve el base64 sin decodificar.
+ *         schema:
+ *           type: boolean
  *     responses:
  *       200:
  *         description: Datos del componente obtenidos exitosamente
@@ -30,6 +36,7 @@ import { Request, Response, RequestHandler } from 'express';
 export const getComponent: RequestHandler = async (req: Request, res: Response) => {
   try {
     const { name } = req.params as { name: string };
+    const { encoded } = req.query as { encoded?: string };
     const response = await fetchComponent(name);
     if (!response) {
       sendResponse(res, 404, {
@@ -38,7 +45,8 @@ export const getComponent: RequestHandler = async (req: Request, res: Response) 
       });
       return;
     }
-    const responseDTO = componentDTO(response);
+    const encodedBool = String(encoded).toLowerCase() === 'true';
+    const responseDTO = componentDTO(response, encodedBool);
     sendResponse(res, 200, responseDTO);
   } catch (error) {
     sendResponse(res, 500, {

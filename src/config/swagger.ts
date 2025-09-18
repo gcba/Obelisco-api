@@ -87,7 +87,7 @@ const swaggerDefinition = {
 			Component: {
 				type: 'object',
 				properties: {
-					code: { type: 'string' },
+					html: { type: 'string' },
 				},
 			},
     },
