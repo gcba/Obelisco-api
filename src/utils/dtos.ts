@@ -47,3 +47,14 @@ export const footerLegalesDTO = (footer: any) => {
     images: footer.images.map((i: any) => ImageDTO(i)),
   };
 };
+
+export const componentDTO = (component: any, encoded: boolean = false, html: boolean = false) => {
+  const content = (!encoded || html)
+		? Buffer.from(component.code, 'base64').toString('utf-8')
+		: component.code;
+
+	if (html) return content;
+  return {
+    html: content,
+  };
+};
